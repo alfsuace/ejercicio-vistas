@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EjercicioVistas</string>
+    <!--buttons-->
+    <string name="action_show_dog_view">Vista del perrete</string>
+    <string name="action_show_burger_view">Vista de la hamburgesa</string>
+    <!--end buttons-->
+
+    <!--burger-->
+    <string name="label_disccount">-15%</string>
+    <!--end burger-->
+
+    <!--perrete-->
+    <string name="label_dogName">Rami</string>
+    <string name="label_dogDescription">Un diamante sin pulir</string>
+    <string name="label_dogGenreFemale">Hembra</string>
+    <string name="label_dogBday">01-01-2021</string>
+    <!--end perrete-->
+</resources>
