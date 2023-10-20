@@ -3,6 +3,8 @@
     <!--buttons-->
     <string name="action_show_dog_view">Vista del perrete</string>
     <string name="action_show_burger_view">Vista de la hamburgesa</string>
+    <string name="action_show_youthCard_view">Vista de la tarjeta joven</string>
+    <string name="action_show_whatsApp_view">Vista de WhatsApp</string>
     <!--end buttons-->
 
     <!--burger-->
