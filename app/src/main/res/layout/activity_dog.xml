@@ -1,99 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".features.dog.presentation.DogActivity">
 
-    <ImageView
-        android:id="@+id/dog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/ic_dog"></ImageView>
 
-    <TextView
-        android:id="@+id/dogName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dog"
-        android:layout_alignStart="@id/dog"
-        android:layout_marginStart="20dp"
-        android:text="@string/label_dogName"
-        android:textSize="30dp"
-        android:textStyle="bold"></TextView>
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeletonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/dogDecription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dogName"
-        android:layout_alignStart="@id/dogName"
-        android:layout_marginTop="10dp"
-        android:text="@string/label_dogDescription"
-        android:textSize="20dp"
-        ></TextView>
+        <com.google.android.material.card.MaterialCardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/dog_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            card_view:cardCornerRadius="24dp">
 
-    <ImageView
-        android:id="@+id/iconFemale"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_female"
-        android:layout_alignStart="@id/dogDecription"
-        android:layout_below="@id/dogDecription"
-        android:layout_marginTop="10dp"
-        />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/dogGengre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dogDecription"
-        android:layout_toEndOf="@id/iconFemale"
-        android:layout_marginTop="10dp"
-        android:text="@string/label_dogGenreFemale"
-        android:layout_marginStart="5dp"
-        ></TextView>
+                <ImageView
+                    android:id="@+id/dog"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_launcher_background"></ImageView>
 
-    <ImageView
-        android:id="@+id/iconBday"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_cake"
-        android:layout_toEndOf="@id/dogGengre"
-        android:layout_below="@id/dogDecription"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        />
-    <TextView
-        android:id="@+id/dogBday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dogDecription"
-        android:layout_toEndOf="@id/iconBday"
-        android:layout_marginTop="10dp"
-        android:text="@string/label_dogBday"
-        android:layout_marginStart="5dp"
-        ></TextView>
+                <TextView
+                    android:id="@+id/dogName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dog"
+                    android:layout_alignStart="@id/dog"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/label_dogName"
+                    android:textSize="30dp"
+                    android:textStyle="bold"></TextView>
 
-    <ImageView
-        android:id="@+id/iconLike"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_like"
-        android:layout_alignEnd="@id/dog"
-        android:layout_below="@id/dogDecription"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        />
+                <TextView
+                    android:id="@+id/dogDecription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dogName"
+                    android:layout_alignStart="@id/dogName"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/label_dogDescription"
+                    android:textSize="20dp"></TextView>
 
-    <ImageView
-        android:id="@+id/iconShare"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_share"
-        android:layout_toStartOf="@id/iconLike"
-        android:layout_below="@id/dogDecription"
-        android:layout_marginTop="10dp"
-        />
-</RelativeLayout>
+                <ImageView
+                    android:id="@+id/iconFemale"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_alignStart="@id/dogDecription"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_female" />
+
+                <TextView
+                    android:id="@+id/dogGengre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/iconFemale"
+                    android:text="@string/label_dogGenreFemale"></TextView>
+
+                <ImageView
+                    android:id="@+id/iconBday"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/dogGengre"
+                    android:src="@drawable/ic_cake" />
+
+                <TextView
+                    android:id="@+id/dogBday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/iconBday"
+                    android:text="@string/label_dogBday"></TextView>
+
+                <ImageView
+                    android:id="@+id/iconLike"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_alignEnd="@id/dog"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_like" />
+
+                <ImageView
+                    android:id="@+id/iconShare"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/dogDecription"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/iconLike"
+                    android:src="@drawable/ic_share" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+    <include
+        android:id="@+id/view_error"
+        layout="@layout/view_error" />
+
+</FrameLayout>

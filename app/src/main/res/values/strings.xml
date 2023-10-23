@@ -17,4 +17,8 @@
     <string name="label_dogGenreFemale">Hembra</string>
     <string name="label_dogBday">01-01-2021</string>
     <!--end perrete-->
+    
+    <!--ErrorView-->
+    <string name="label_unknown_error">Ha ocurrido un error desconocido</string>
+    <!--end ErrorView-->
 </resources>
