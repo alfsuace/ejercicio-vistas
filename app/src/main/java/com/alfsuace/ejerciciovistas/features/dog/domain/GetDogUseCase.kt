@@ -1,11 +1,13 @@
-package com.alfsuace.androidtrainning.features.ex02.domain
+package com.alfsuace.ejerciciovistas.features.dog.domain
 
-import com.alfsuace.androidtrainning.app.Either
-import com.alfsuace.androidtrainning.app.ErrorApp
+
+import com.alfsuace.ejerciciovistas.app.Either
+import com.alfsuace.ejerciciovistas.app.ErrorApp
+import kotlinx.coroutines.CoroutineDispatcher
 
 
 class GetDogUseCase (private val repository: DogRepository){
-    operator fun invoke(): Either<ErrorApp, Dog> {
+    operator fun invoke(io: CoroutineDispatcher): Either<ErrorApp, Dog> {
         return repository.obtain()
     }
 }

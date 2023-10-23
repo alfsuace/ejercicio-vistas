@@ -1,10 +1,13 @@
-package com.alfsuace.androidtrainning.features.ex02.domain
+package com.alfsuace.ejerciciovistas.features.dog.domain
 
-import com.alfsuace.androidtrainning.app.Either
-import com.alfsuace.androidtrainning.app.ErrorApp
+
+import com.alfsuace.ejerciciovistas.app.ErrorApp
+
+import com.alfsuace.ejerciciovistas.app.Either
+
 
 
 interface DogRepository {
-    //fun save(input: SaveDogUseCase.Input): Either<ErrorApp, Boolean>
+
     fun obtain(): Either<ErrorApp, Dog>
 }

@@ -1,4 +1,4 @@
-package com.miguelalvrub.ex02_formandstore.app
+package com.alfsuace.ejerciciovistas.app
 
 sealed class ErrorApp {
     object UnknowErrorApp : ErrorApp()
